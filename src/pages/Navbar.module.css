@@ -1,6 +1,6 @@
 .nav_container{
     position: relative;
-   background: #e3e0e0;
+    background: #e3e0e0;
     height: 70px;
     display: flex;
     justify-content: space-around;
@@ -16,7 +16,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
-    padding: 10px;
+    padding:25px 10px;
    
 }
 .nav_list_container{

@@ -3,7 +3,7 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 gap: 15px;
-
+padding: 14px 10px;
 }
 .NavList_text{
     font-family: 'Inter';
