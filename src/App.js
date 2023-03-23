@@ -1,25 +1,31 @@
 import "./App.css";
-import AllRutes from "./Router/AllRutes";
-import { BrowserRouter as Router } from "react-router-dom";
-import Navbar from "./pages/Navbar";
-import { AuthProvider } from "react-auth-kit";
+import Header from "./components/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Cart from "./components/Cart";
+import Footer from "./components/Footer";
+import SubFooter from "./components/SubFooter";
+import SubHeadder from "./components/Subheadder";
 
 function App() {
   return (
-    <>
-      <AuthProvider
-        authType={"cookie"}
-        authName={"_auth"}
-        cookieDomain={window.location.hostname}
-        // cookieSecure={window.location.protocol === "https:"}
-        cookieSecure={false}
-      >
-        <Router>
-          <Navbar />
-          <AllRutes></AllRutes>
-        </Router>
-      </AuthProvider>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <SubHeadder />
+              <Home />
+            </>
+          }
+        />
+        <Route path="cart" element={<Cart />} />
+      </Routes>
+      <SubFooter />
+      <Footer />
+    </BrowserRouter>
   );
 }
 

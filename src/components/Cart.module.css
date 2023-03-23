@@ -1,0 +1,44 @@
+.cartitem {
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    margin-bottom: 20px;
+     }
+    
+     .cartitemimg {
+        border-radius: 10%;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+     }
+    
+     .cartitemdetail {
+        display: flex;
+        flex: 1;
+        padding:  0 20px;
+        flex-direction: column;
+     }
+
+     .home {
+       
+        display: flex;
+      
+     }
+
+     .prices {
+        width: 20%;
+        height: 90vh;
+      
+        background-color: rgb(218, 228, 233);
+     
+     }
+
+     .productcontainer {
+      padding: 50px;
+        width: 80%;
+     }
+
+     .final {
+        margin-top: 20%;
+     }
