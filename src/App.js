@@ -6,9 +6,11 @@ import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import SubFooter from "./components/SubFooter";
 import SubHeadder from "./components/Subheadder";
-
+import Login from './components/Login'
+import { AuthContextProvider } from "./store/auth-context";
 function App() {
   return (
+    <AuthContextProvider>
     <BrowserRouter>
       <Routes>
         <Route
@@ -22,10 +24,12 @@ function App() {
           }
         />
         <Route path="cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <SubFooter />
       <Footer />
     </BrowserRouter>
+    </AuthContextProvider>
   );
 }
 
